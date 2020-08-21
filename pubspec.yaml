@@ -1,0 +1,40 @@
+name: wifi_rssi_dumper
+description: A new Flutter project.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.7.0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  android_wifi_info: ^0.1.1
+  dartz: ^0.9.1
+  freezed_annotation: ^0.11.0+1
+  get_it: ^4.0.4
+  injectable: ^1.0.4
+  flushbar: ^1.10.4
+  uuid: ^2.2.0
+  auto_route: ^0.6.7
+  json_annotation: ^3.0.1
+  moor: ^3.3.1
+  moor_flutter: ^3.1.0
+  flutter_bloc: ^6.0.1
+  rflutter_alert: ^1.0.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner:
+  freezed: ^0.11.5
+  injectable_generator: ^1.0.4
+  auto_route_generator: ^0.6.8
+  moor_generator: ^3.3.1
+  json_serializable: ^3.4.0
+  mockito: ^4.1.1
+
+flutter:
+  uses-material-design: true
