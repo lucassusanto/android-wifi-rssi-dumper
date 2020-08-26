@@ -1,4 +1,4 @@
-package com.example.wifi_rssi_dumper
+package com.unicode.wifi_rssi_dumper
 
 import io.flutter.embedding.android.FlutterActivity
 
