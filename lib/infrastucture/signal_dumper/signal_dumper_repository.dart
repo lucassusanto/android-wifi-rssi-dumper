@@ -4,6 +4,7 @@ import 'package:injectable/injectable.dart';
 import '../../domain/signal_dumper/i_signal_dumper_repository.dart';
 import '../../domain/signal_dumper/signal_dumper_failures.dart';
 import '../../domain/signal_dumper/value_objects.dart';
+import 'signal_dto.dart';
 import 'signal_dumper_local_data_source.dart';
 import 'signal_dumper_remote_data_source.dart';
 
@@ -76,14 +77,8 @@ class SignalDumperRepository implements ISignalDumperRepository {
     YPosition y,
   }) async {
     try {
-      final signalDto = await _remoteDataSource.getWifi();
-
-      if (signalDto.ssid == null || signalDto.rssi == null) {
-        return left(SignalDumperFailure.disconnectedFromAccessPoint());
-      }
-
       await _localDataSource.deleteAllInPosition(
-        signalDto.copyWith(
+        SignalDto(
           xPosition: x.getOrCrash(),
           yPosition: y.getOrCrash(),
         ),
@@ -93,6 +88,19 @@ class SignalDumperRepository implements ISignalDumperRepository {
     } catch (e) {
       print(
         'Unexpected failure at SignalDumperRepository@deleteAllDumpInPosition! ${e.toString()}',
+      );
+      return left(SignalDumperFailure.unexpectedFailure());
+    }
+  }
+
+  @override
+  Future<Either<SignalDumperFailure, Unit>> deleteAllDump() async {
+    try {
+      await _localDataSource.deleteAll();
+      return right(unit);
+    } catch (e) {
+      print(
+        'Unexpected failure at SignalDumperRepository@deleteAll! ${e.toString()}',
       );
       return left(SignalDumperFailure.unexpectedFailure());
     }

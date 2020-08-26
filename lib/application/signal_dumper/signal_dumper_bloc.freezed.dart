@@ -49,6 +49,11 @@ class _$SignalDumperEventTearOff {
   }
 
 // ignore: unused_element
+  _DeleteAll deleteAll() {
+    return const _DeleteAll();
+  }
+
+// ignore: unused_element
   _StateChanged stateChanged(SignalDumperState newState) {
     return _StateChanged(
       newState,
@@ -68,6 +73,7 @@ mixin _$SignalDumperEvent {
     @required Result start(),
     @required Result stop(),
     @required Result deleteAllInPosition(),
+    @required Result deleteAll(),
     @required Result stateChanged(SignalDumperState newState),
   });
   @optionalTypeArgs
@@ -78,6 +84,7 @@ mixin _$SignalDumperEvent {
     Result start(),
     Result stop(),
     Result deleteAllInPosition(),
+    Result deleteAll(),
     Result stateChanged(SignalDumperState newState),
     @required Result orElse(),
   });
@@ -89,6 +96,7 @@ mixin _$SignalDumperEvent {
     @required Result start(_Start value),
     @required Result stop(_Stop value),
     @required Result deleteAllInPosition(_DeleteAllInPosition value),
+    @required Result deleteAll(_DeleteAll value),
     @required Result stateChanged(_StateChanged value),
   });
   @optionalTypeArgs
@@ -99,6 +107,7 @@ mixin _$SignalDumperEvent {
     Result start(_Start value),
     Result stop(_Stop value),
     Result deleteAllInPosition(_DeleteAllInPosition value),
+    Result deleteAll(_DeleteAll value),
     Result stateChanged(_StateChanged value),
     @required Result orElse(),
   });
@@ -182,6 +191,7 @@ class _$_XPositionChanged implements _XPositionChanged {
     @required Result start(),
     @required Result stop(),
     @required Result deleteAllInPosition(),
+    @required Result deleteAll(),
     @required Result stateChanged(SignalDumperState newState),
   }) {
     assert(xPositionChanged != null);
@@ -190,6 +200,7 @@ class _$_XPositionChanged implements _XPositionChanged {
     assert(start != null);
     assert(stop != null);
     assert(deleteAllInPosition != null);
+    assert(deleteAll != null);
     assert(stateChanged != null);
     return xPositionChanged(x);
   }
@@ -203,6 +214,7 @@ class _$_XPositionChanged implements _XPositionChanged {
     Result start(),
     Result stop(),
     Result deleteAllInPosition(),
+    Result deleteAll(),
     Result stateChanged(SignalDumperState newState),
     @required Result orElse(),
   }) {
@@ -222,6 +234,7 @@ class _$_XPositionChanged implements _XPositionChanged {
     @required Result start(_Start value),
     @required Result stop(_Stop value),
     @required Result deleteAllInPosition(_DeleteAllInPosition value),
+    @required Result deleteAll(_DeleteAll value),
     @required Result stateChanged(_StateChanged value),
   }) {
     assert(xPositionChanged != null);
@@ -230,6 +243,7 @@ class _$_XPositionChanged implements _XPositionChanged {
     assert(start != null);
     assert(stop != null);
     assert(deleteAllInPosition != null);
+    assert(deleteAll != null);
     assert(stateChanged != null);
     return xPositionChanged(this);
   }
@@ -243,6 +257,7 @@ class _$_XPositionChanged implements _XPositionChanged {
     Result start(_Start value),
     Result stop(_Stop value),
     Result deleteAllInPosition(_DeleteAllInPosition value),
+    Result deleteAll(_DeleteAll value),
     Result stateChanged(_StateChanged value),
     @required Result orElse(),
   }) {
@@ -324,6 +339,7 @@ class _$_YPositionChanged implements _YPositionChanged {
     @required Result start(),
     @required Result stop(),
     @required Result deleteAllInPosition(),
+    @required Result deleteAll(),
     @required Result stateChanged(SignalDumperState newState),
   }) {
     assert(xPositionChanged != null);
@@ -332,6 +348,7 @@ class _$_YPositionChanged implements _YPositionChanged {
     assert(start != null);
     assert(stop != null);
     assert(deleteAllInPosition != null);
+    assert(deleteAll != null);
     assert(stateChanged != null);
     return yPositionChanged(y);
   }
@@ -345,6 +362,7 @@ class _$_YPositionChanged implements _YPositionChanged {
     Result start(),
     Result stop(),
     Result deleteAllInPosition(),
+    Result deleteAll(),
     Result stateChanged(SignalDumperState newState),
     @required Result orElse(),
   }) {
@@ -364,6 +382,7 @@ class _$_YPositionChanged implements _YPositionChanged {
     @required Result start(_Start value),
     @required Result stop(_Stop value),
     @required Result deleteAllInPosition(_DeleteAllInPosition value),
+    @required Result deleteAll(_DeleteAll value),
     @required Result stateChanged(_StateChanged value),
   }) {
     assert(xPositionChanged != null);
@@ -372,6 +391,7 @@ class _$_YPositionChanged implements _YPositionChanged {
     assert(start != null);
     assert(stop != null);
     assert(deleteAllInPosition != null);
+    assert(deleteAll != null);
     assert(stateChanged != null);
     return yPositionChanged(this);
   }
@@ -385,6 +405,7 @@ class _$_YPositionChanged implements _YPositionChanged {
     Result start(_Start value),
     Result stop(_Stop value),
     Result deleteAllInPosition(_DeleteAllInPosition value),
+    Result deleteAll(_DeleteAll value),
     Result stateChanged(_StateChanged value),
     @required Result orElse(),
   }) {
@@ -470,6 +491,7 @@ class _$_SamplingAmountChanged implements _SamplingAmountChanged {
     @required Result start(),
     @required Result stop(),
     @required Result deleteAllInPosition(),
+    @required Result deleteAll(),
     @required Result stateChanged(SignalDumperState newState),
   }) {
     assert(xPositionChanged != null);
@@ -478,6 +500,7 @@ class _$_SamplingAmountChanged implements _SamplingAmountChanged {
     assert(start != null);
     assert(stop != null);
     assert(deleteAllInPosition != null);
+    assert(deleteAll != null);
     assert(stateChanged != null);
     return samplingAmountChanged(samplingAmount);
   }
@@ -491,6 +514,7 @@ class _$_SamplingAmountChanged implements _SamplingAmountChanged {
     Result start(),
     Result stop(),
     Result deleteAllInPosition(),
+    Result deleteAll(),
     Result stateChanged(SignalDumperState newState),
     @required Result orElse(),
   }) {
@@ -510,6 +534,7 @@ class _$_SamplingAmountChanged implements _SamplingAmountChanged {
     @required Result start(_Start value),
     @required Result stop(_Stop value),
     @required Result deleteAllInPosition(_DeleteAllInPosition value),
+    @required Result deleteAll(_DeleteAll value),
     @required Result stateChanged(_StateChanged value),
   }) {
     assert(xPositionChanged != null);
@@ -518,6 +543,7 @@ class _$_SamplingAmountChanged implements _SamplingAmountChanged {
     assert(start != null);
     assert(stop != null);
     assert(deleteAllInPosition != null);
+    assert(deleteAll != null);
     assert(stateChanged != null);
     return samplingAmountChanged(this);
   }
@@ -531,6 +557,7 @@ class _$_SamplingAmountChanged implements _SamplingAmountChanged {
     Result start(_Start value),
     Result stop(_Stop value),
     Result deleteAllInPosition(_DeleteAllInPosition value),
+    Result deleteAll(_DeleteAll value),
     Result stateChanged(_StateChanged value),
     @required Result orElse(),
   }) {
@@ -589,6 +616,7 @@ class _$_Start implements _Start {
     @required Result start(),
     @required Result stop(),
     @required Result deleteAllInPosition(),
+    @required Result deleteAll(),
     @required Result stateChanged(SignalDumperState newState),
   }) {
     assert(xPositionChanged != null);
@@ -597,6 +625,7 @@ class _$_Start implements _Start {
     assert(start != null);
     assert(stop != null);
     assert(deleteAllInPosition != null);
+    assert(deleteAll != null);
     assert(stateChanged != null);
     return start();
   }
@@ -610,6 +639,7 @@ class _$_Start implements _Start {
     Result start(),
     Result stop(),
     Result deleteAllInPosition(),
+    Result deleteAll(),
     Result stateChanged(SignalDumperState newState),
     @required Result orElse(),
   }) {
@@ -629,6 +659,7 @@ class _$_Start implements _Start {
     @required Result start(_Start value),
     @required Result stop(_Stop value),
     @required Result deleteAllInPosition(_DeleteAllInPosition value),
+    @required Result deleteAll(_DeleteAll value),
     @required Result stateChanged(_StateChanged value),
   }) {
     assert(xPositionChanged != null);
@@ -637,6 +668,7 @@ class _$_Start implements _Start {
     assert(start != null);
     assert(stop != null);
     assert(deleteAllInPosition != null);
+    assert(deleteAll != null);
     assert(stateChanged != null);
     return start(this);
   }
@@ -650,6 +682,7 @@ class _$_Start implements _Start {
     Result start(_Start value),
     Result stop(_Stop value),
     Result deleteAllInPosition(_DeleteAllInPosition value),
+    Result deleteAll(_DeleteAll value),
     Result stateChanged(_StateChanged value),
     @required Result orElse(),
   }) {
@@ -704,6 +737,7 @@ class _$_Stop implements _Stop {
     @required Result start(),
     @required Result stop(),
     @required Result deleteAllInPosition(),
+    @required Result deleteAll(),
     @required Result stateChanged(SignalDumperState newState),
   }) {
     assert(xPositionChanged != null);
@@ -712,6 +746,7 @@ class _$_Stop implements _Stop {
     assert(start != null);
     assert(stop != null);
     assert(deleteAllInPosition != null);
+    assert(deleteAll != null);
     assert(stateChanged != null);
     return stop();
   }
@@ -725,6 +760,7 @@ class _$_Stop implements _Stop {
     Result start(),
     Result stop(),
     Result deleteAllInPosition(),
+    Result deleteAll(),
     Result stateChanged(SignalDumperState newState),
     @required Result orElse(),
   }) {
@@ -744,6 +780,7 @@ class _$_Stop implements _Stop {
     @required Result start(_Start value),
     @required Result stop(_Stop value),
     @required Result deleteAllInPosition(_DeleteAllInPosition value),
+    @required Result deleteAll(_DeleteAll value),
     @required Result stateChanged(_StateChanged value),
   }) {
     assert(xPositionChanged != null);
@@ -752,6 +789,7 @@ class _$_Stop implements _Stop {
     assert(start != null);
     assert(stop != null);
     assert(deleteAllInPosition != null);
+    assert(deleteAll != null);
     assert(stateChanged != null);
     return stop(this);
   }
@@ -765,6 +803,7 @@ class _$_Stop implements _Stop {
     Result start(_Start value),
     Result stop(_Stop value),
     Result deleteAllInPosition(_DeleteAllInPosition value),
+    Result deleteAll(_DeleteAll value),
     Result stateChanged(_StateChanged value),
     @required Result orElse(),
   }) {
@@ -822,6 +861,7 @@ class _$_DeleteAllInPosition implements _DeleteAllInPosition {
     @required Result start(),
     @required Result stop(),
     @required Result deleteAllInPosition(),
+    @required Result deleteAll(),
     @required Result stateChanged(SignalDumperState newState),
   }) {
     assert(xPositionChanged != null);
@@ -830,6 +870,7 @@ class _$_DeleteAllInPosition implements _DeleteAllInPosition {
     assert(start != null);
     assert(stop != null);
     assert(deleteAllInPosition != null);
+    assert(deleteAll != null);
     assert(stateChanged != null);
     return deleteAllInPosition();
   }
@@ -843,6 +884,7 @@ class _$_DeleteAllInPosition implements _DeleteAllInPosition {
     Result start(),
     Result stop(),
     Result deleteAllInPosition(),
+    Result deleteAll(),
     Result stateChanged(SignalDumperState newState),
     @required Result orElse(),
   }) {
@@ -862,6 +904,7 @@ class _$_DeleteAllInPosition implements _DeleteAllInPosition {
     @required Result start(_Start value),
     @required Result stop(_Stop value),
     @required Result deleteAllInPosition(_DeleteAllInPosition value),
+    @required Result deleteAll(_DeleteAll value),
     @required Result stateChanged(_StateChanged value),
   }) {
     assert(xPositionChanged != null);
@@ -870,6 +913,7 @@ class _$_DeleteAllInPosition implements _DeleteAllInPosition {
     assert(start != null);
     assert(stop != null);
     assert(deleteAllInPosition != null);
+    assert(deleteAll != null);
     assert(stateChanged != null);
     return deleteAllInPosition(this);
   }
@@ -883,6 +927,7 @@ class _$_DeleteAllInPosition implements _DeleteAllInPosition {
     Result start(_Start value),
     Result stop(_Stop value),
     Result deleteAllInPosition(_DeleteAllInPosition value),
+    Result deleteAll(_DeleteAll value),
     Result stateChanged(_StateChanged value),
     @required Result orElse(),
   }) {
@@ -896,6 +941,129 @@ class _$_DeleteAllInPosition implements _DeleteAllInPosition {
 
 abstract class _DeleteAllInPosition implements SignalDumperEvent {
   const factory _DeleteAllInPosition() = _$_DeleteAllInPosition;
+}
+
+abstract class _$DeleteAllCopyWith<$Res> {
+  factory _$DeleteAllCopyWith(
+          _DeleteAll value, $Res Function(_DeleteAll) then) =
+      __$DeleteAllCopyWithImpl<$Res>;
+}
+
+class __$DeleteAllCopyWithImpl<$Res>
+    extends _$SignalDumperEventCopyWithImpl<$Res>
+    implements _$DeleteAllCopyWith<$Res> {
+  __$DeleteAllCopyWithImpl(_DeleteAll _value, $Res Function(_DeleteAll) _then)
+      : super(_value, (v) => _then(v as _DeleteAll));
+
+  @override
+  _DeleteAll get _value => super._value as _DeleteAll;
+}
+
+class _$_DeleteAll implements _DeleteAll {
+  const _$_DeleteAll();
+
+  @override
+  String toString() {
+    return 'SignalDumperEvent.deleteAll()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is _DeleteAll);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result xPositionChanged(int x),
+    @required Result yPositionChanged(int y),
+    @required Result samplingAmountChanged(int samplingAmount),
+    @required Result start(),
+    @required Result stop(),
+    @required Result deleteAllInPosition(),
+    @required Result deleteAll(),
+    @required Result stateChanged(SignalDumperState newState),
+  }) {
+    assert(xPositionChanged != null);
+    assert(yPositionChanged != null);
+    assert(samplingAmountChanged != null);
+    assert(start != null);
+    assert(stop != null);
+    assert(deleteAllInPosition != null);
+    assert(deleteAll != null);
+    assert(stateChanged != null);
+    return deleteAll();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result xPositionChanged(int x),
+    Result yPositionChanged(int y),
+    Result samplingAmountChanged(int samplingAmount),
+    Result start(),
+    Result stop(),
+    Result deleteAllInPosition(),
+    Result deleteAll(),
+    Result stateChanged(SignalDumperState newState),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (deleteAll != null) {
+      return deleteAll();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result xPositionChanged(_XPositionChanged value),
+    @required Result yPositionChanged(_YPositionChanged value),
+    @required Result samplingAmountChanged(_SamplingAmountChanged value),
+    @required Result start(_Start value),
+    @required Result stop(_Stop value),
+    @required Result deleteAllInPosition(_DeleteAllInPosition value),
+    @required Result deleteAll(_DeleteAll value),
+    @required Result stateChanged(_StateChanged value),
+  }) {
+    assert(xPositionChanged != null);
+    assert(yPositionChanged != null);
+    assert(samplingAmountChanged != null);
+    assert(start != null);
+    assert(stop != null);
+    assert(deleteAllInPosition != null);
+    assert(deleteAll != null);
+    assert(stateChanged != null);
+    return deleteAll(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result xPositionChanged(_XPositionChanged value),
+    Result yPositionChanged(_YPositionChanged value),
+    Result samplingAmountChanged(_SamplingAmountChanged value),
+    Result start(_Start value),
+    Result stop(_Stop value),
+    Result deleteAllInPosition(_DeleteAllInPosition value),
+    Result deleteAll(_DeleteAll value),
+    Result stateChanged(_StateChanged value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (deleteAll != null) {
+      return deleteAll(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _DeleteAll implements SignalDumperEvent {
+  const factory _DeleteAll() = _$_DeleteAll;
 }
 
 abstract class _$StateChangedCopyWith<$Res> {
@@ -974,6 +1142,7 @@ class _$_StateChanged implements _StateChanged {
     @required Result start(),
     @required Result stop(),
     @required Result deleteAllInPosition(),
+    @required Result deleteAll(),
     @required Result stateChanged(SignalDumperState newState),
   }) {
     assert(xPositionChanged != null);
@@ -982,6 +1151,7 @@ class _$_StateChanged implements _StateChanged {
     assert(start != null);
     assert(stop != null);
     assert(deleteAllInPosition != null);
+    assert(deleteAll != null);
     assert(stateChanged != null);
     return stateChanged(newState);
   }
@@ -995,6 +1165,7 @@ class _$_StateChanged implements _StateChanged {
     Result start(),
     Result stop(),
     Result deleteAllInPosition(),
+    Result deleteAll(),
     Result stateChanged(SignalDumperState newState),
     @required Result orElse(),
   }) {
@@ -1014,6 +1185,7 @@ class _$_StateChanged implements _StateChanged {
     @required Result start(_Start value),
     @required Result stop(_Stop value),
     @required Result deleteAllInPosition(_DeleteAllInPosition value),
+    @required Result deleteAll(_DeleteAll value),
     @required Result stateChanged(_StateChanged value),
   }) {
     assert(xPositionChanged != null);
@@ -1022,6 +1194,7 @@ class _$_StateChanged implements _StateChanged {
     assert(start != null);
     assert(stop != null);
     assert(deleteAllInPosition != null);
+    assert(deleteAll != null);
     assert(stateChanged != null);
     return stateChanged(this);
   }
@@ -1035,6 +1208,7 @@ class _$_StateChanged implements _StateChanged {
     Result start(_Start value),
     Result stop(_Stop value),
     Result deleteAllInPosition(_DeleteAllInPosition value),
+    Result deleteAll(_DeleteAll value),
     Result stateChanged(_StateChanged value),
     @required Result orElse(),
   }) {

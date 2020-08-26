@@ -19,9 +19,6 @@ class SignalDumperPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('RSSI Dumper'),
-      ),
       body: BlocProvider(
         create: (context) => getIt<SignalDumperBloc>(),
         child: BlocConsumer<SignalDumperBloc, SignalDumperState>(

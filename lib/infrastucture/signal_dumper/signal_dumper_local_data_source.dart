@@ -7,6 +7,7 @@ abstract class SignalDumperLocalDataSource {
   Future<int> getDumpAmount(SignalDto signalDto);
   Future<void> singleDump(SignalDto signalDto);
   Future<void> deleteAllInPosition(SignalDto signalDto);
+  Future<void> deleteAll();
 }
 
 @LazySingleton(as: SignalDumperLocalDataSource)
@@ -43,5 +44,10 @@ class SignalDumperLocalDataSourceImpl implements SignalDumperLocalDataSource {
       x: signalDto.xPosition,
       y: signalDto.yPosition,
     );
+  }
+
+  @override
+  Future<void> deleteAll() async {
+    await database.deleteSignals();
   }
 }

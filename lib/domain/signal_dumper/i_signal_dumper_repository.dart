@@ -20,4 +20,6 @@ abstract class ISignalDumperRepository {
     @required XPosition x,
     @required YPosition y,
   });
+
+  Future<Either<SignalDumperFailure, Unit>> deleteAllDump();
 }

@@ -22,13 +22,15 @@ class SignalDumperBloc extends Bloc<SignalDumperEvent, SignalDumperState> {
       : super(SignalDumperState.initial());
 
   StreamSubscription<SignalDumperState> _samplingProcessSubscription;
-  StreamSubscription<SignalDumperState> _dumpDeletionSubscription;
+  StreamSubscription<SignalDumperState> _deleteAllDumpInPositionSubscription;
+  StreamSubscription<SignalDumperState> _deleteAllDumpSubscription;
   bool isProcessing = false;
 
   @override
   Future<void> close() async {
     await _samplingProcessSubscription?.cancel();
-    await _dumpDeletionSubscription?.cancel();
+    await _deleteAllDumpInPositionSubscription?.cancel();
+    await _deleteAllDumpSubscription?.cancel();
     return super.close();
   }
 
@@ -56,9 +58,15 @@ class SignalDumperBloc extends Bloc<SignalDumperEvent, SignalDumperState> {
         isProcessing = false;
       },
       deleteAllInPosition: (_) async* {
-        await _dumpDeletionSubscription?.cancel();
-        _dumpDeletionSubscription =
+        await _deleteAllDumpInPositionSubscription?.cancel();
+        _deleteAllDumpInPositionSubscription =
             _deleteAllDumpInPosition().listen((newState) {
+          add(SignalDumperEvent.stateChanged(newState));
+        });
+      },
+      deleteAll: (e) async* {
+        await _deleteAllDumpSubscription?.cancel();
+        _deleteAllDumpSubscription = _deleteAllDump().listen((newState) {
           add(SignalDumperEvent.stateChanged(newState));
         });
       },
@@ -137,6 +145,22 @@ class SignalDumperBloc extends Bloc<SignalDumperEvent, SignalDumperState> {
       x: state.xPosition,
       y: state.yPosition,
     );
+
+    yield either.fold(
+      (f) => state.copyWith(failureOrSuccess: some(left(f))),
+      (_) => state,
+    );
+
+    yield state.copyWith(isProcessing: false);
+  }
+
+  Stream<SignalDumperState> _deleteAllDump() async* {
+    yield state.copyWith(
+      isProcessing: true,
+      failureOrSuccess: some(right(unit)),
+    );
+
+    final either = await _signalDumperRepository.deleteAllDump();
 
     yield either.fold(
       (f) => state.copyWith(failureOrSuccess: some(left(f))),

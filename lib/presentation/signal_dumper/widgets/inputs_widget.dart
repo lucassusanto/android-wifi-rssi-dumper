@@ -80,8 +80,10 @@ class InputsWidget extends StatelessWidget {
                   initialValue: samplingAmount.toString(),
                   autocorrect: false,
                   onChanged: (value) => context.bloc<SignalDumperBloc>().add(
-                      SignalDumperEvent.samplingAmountChanged(
-                          int.parse(value))),
+                        SignalDumperEvent.samplingAmountChanged(
+                          int.parse(value),
+                        ),
+                      ),
                   validator: (_) => context
                       .bloc<SignalDumperBloc>()
                       .state

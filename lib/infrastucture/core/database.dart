@@ -38,6 +38,8 @@ class AppDatabase extends _$AppDatabase {
             ..where((signal) => signal.x.equals(x))
             ..where((signal) => signal.y.equals(y)))
           .go();
+
+  Future deleteSignals() => delete(signals).go();
 }
 
 class Signals extends Table {
