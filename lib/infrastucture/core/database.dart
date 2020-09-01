@@ -4,7 +4,7 @@ part 'database.g.dart';
 
 @UseMoor(tables: [Signals])
 class AppDatabase extends _$AppDatabase {
-  // DB Path: data/data/db.sqlite
+  // DB Path: /data/data/com.unicode.wifi_rssi_dumper/databases/db.sqlite,db.sqlite-journal
 
   AppDatabase()
       : super(FlutterQueryExecutor.inDatabaseFolder(

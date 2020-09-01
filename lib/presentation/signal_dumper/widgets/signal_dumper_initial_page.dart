@@ -43,7 +43,7 @@ class SignalDumperInitialPage extends StatelessWidget {
                     InputsWidget(),
                     SizedBox(height: 32.0),
                     Row(
-                      children: [
+                      children: <Widget>[
                         Expanded(
                           child: RaisedButton(
                             child: Text('START'),

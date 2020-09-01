@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../application/signal_dumper/signal_dumper_bloc.dart';
 import '../../core/dialogs/confirmation_dialog.dart';
@@ -13,9 +14,12 @@ class SignalDumperAppBar extends StatelessWidget {
           onSelected: (value) {
             switch (value) {
               case 1:
-                deleteAllDumpInPosition(context);
+                exportDatabaseFiles(context);
                 break;
               case 2:
+                deleteAllDumpInPosition(context);
+                break;
+              case 3:
                 deleteAllDump(context);
                 break;
               default:
@@ -25,14 +29,20 @@ class SignalDumperAppBar extends StatelessWidget {
             var list = List<PopupMenuEntry<Object>>();
             list.add(
               PopupMenuItem(
-                child: Text('Delete all dump in position'),
+                child: Text('Dump database to Documents'),
                 value: 1,
               ),
             );
             list.add(
               PopupMenuItem(
-                child: Text('Delete all dump'),
+                child: Text('Delete all dump in position'),
                 value: 2,
+              ),
+            );
+            list.add(
+              PopupMenuItem(
+                child: Text('Delete all dump'),
+                value: 3,
               ),
             );
             return list;
@@ -42,13 +52,23 @@ class SignalDumperAppBar extends StatelessWidget {
     );
   }
 
+  void exportDatabaseFiles(context) {
+    showConfirmationDialog(
+      context: context,
+      message: 'Are you sure to export database into files?',
+      action: () {
+        BlocProvider.of<SignalDumperBloc>(context)
+            .add(const SignalDumperEvent.exportDatabaseFiles());
+      },
+    );
+  }
+
   void deleteAllDumpInPosition(context) {
     showConfirmationDialog(
       context: context,
       message: 'Are you sure to delete all dump in inputted position?',
       action: () {
-        context
-            .bloc<SignalDumperBloc>()
+        BlocProvider.of<SignalDumperBloc>(context)
             .add(const SignalDumperEvent.deleteAllInPosition());
       },
     );
@@ -59,8 +79,7 @@ class SignalDumperAppBar extends StatelessWidget {
       context: context,
       message: 'Are you sure to delete all dump?',
       action: () {
-        context
-            .bloc<SignalDumperBloc>()
+        BlocProvider.of<SignalDumperBloc>(context)
             .add(const SignalDumperEvent.deleteAll());
       },
     );

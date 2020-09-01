@@ -44,6 +44,11 @@ class _$SignalDumperEventTearOff {
   }
 
 // ignore: unused_element
+  _ExportDatabaseFiles exportDatabaseFiles() {
+    return const _ExportDatabaseFiles();
+  }
+
+// ignore: unused_element
   _DeleteAllInPosition deleteAllInPosition() {
     return const _DeleteAllInPosition();
   }
@@ -72,6 +77,7 @@ mixin _$SignalDumperEvent {
     @required Result samplingAmountChanged(int samplingAmount),
     @required Result start(),
     @required Result stop(),
+    @required Result exportDatabaseFiles(),
     @required Result deleteAllInPosition(),
     @required Result deleteAll(),
     @required Result stateChanged(SignalDumperState newState),
@@ -83,6 +89,7 @@ mixin _$SignalDumperEvent {
     Result samplingAmountChanged(int samplingAmount),
     Result start(),
     Result stop(),
+    Result exportDatabaseFiles(),
     Result deleteAllInPosition(),
     Result deleteAll(),
     Result stateChanged(SignalDumperState newState),
@@ -95,6 +102,7 @@ mixin _$SignalDumperEvent {
     @required Result samplingAmountChanged(_SamplingAmountChanged value),
     @required Result start(_Start value),
     @required Result stop(_Stop value),
+    @required Result exportDatabaseFiles(_ExportDatabaseFiles value),
     @required Result deleteAllInPosition(_DeleteAllInPosition value),
     @required Result deleteAll(_DeleteAll value),
     @required Result stateChanged(_StateChanged value),
@@ -106,6 +114,7 @@ mixin _$SignalDumperEvent {
     Result samplingAmountChanged(_SamplingAmountChanged value),
     Result start(_Start value),
     Result stop(_Stop value),
+    Result exportDatabaseFiles(_ExportDatabaseFiles value),
     Result deleteAllInPosition(_DeleteAllInPosition value),
     Result deleteAll(_DeleteAll value),
     Result stateChanged(_StateChanged value),
@@ -190,6 +199,7 @@ class _$_XPositionChanged implements _XPositionChanged {
     @required Result samplingAmountChanged(int samplingAmount),
     @required Result start(),
     @required Result stop(),
+    @required Result exportDatabaseFiles(),
     @required Result deleteAllInPosition(),
     @required Result deleteAll(),
     @required Result stateChanged(SignalDumperState newState),
@@ -199,6 +209,7 @@ class _$_XPositionChanged implements _XPositionChanged {
     assert(samplingAmountChanged != null);
     assert(start != null);
     assert(stop != null);
+    assert(exportDatabaseFiles != null);
     assert(deleteAllInPosition != null);
     assert(deleteAll != null);
     assert(stateChanged != null);
@@ -213,6 +224,7 @@ class _$_XPositionChanged implements _XPositionChanged {
     Result samplingAmountChanged(int samplingAmount),
     Result start(),
     Result stop(),
+    Result exportDatabaseFiles(),
     Result deleteAllInPosition(),
     Result deleteAll(),
     Result stateChanged(SignalDumperState newState),
@@ -233,6 +245,7 @@ class _$_XPositionChanged implements _XPositionChanged {
     @required Result samplingAmountChanged(_SamplingAmountChanged value),
     @required Result start(_Start value),
     @required Result stop(_Stop value),
+    @required Result exportDatabaseFiles(_ExportDatabaseFiles value),
     @required Result deleteAllInPosition(_DeleteAllInPosition value),
     @required Result deleteAll(_DeleteAll value),
     @required Result stateChanged(_StateChanged value),
@@ -242,6 +255,7 @@ class _$_XPositionChanged implements _XPositionChanged {
     assert(samplingAmountChanged != null);
     assert(start != null);
     assert(stop != null);
+    assert(exportDatabaseFiles != null);
     assert(deleteAllInPosition != null);
     assert(deleteAll != null);
     assert(stateChanged != null);
@@ -256,6 +270,7 @@ class _$_XPositionChanged implements _XPositionChanged {
     Result samplingAmountChanged(_SamplingAmountChanged value),
     Result start(_Start value),
     Result stop(_Stop value),
+    Result exportDatabaseFiles(_ExportDatabaseFiles value),
     Result deleteAllInPosition(_DeleteAllInPosition value),
     Result deleteAll(_DeleteAll value),
     Result stateChanged(_StateChanged value),
@@ -338,6 +353,7 @@ class _$_YPositionChanged implements _YPositionChanged {
     @required Result samplingAmountChanged(int samplingAmount),
     @required Result start(),
     @required Result stop(),
+    @required Result exportDatabaseFiles(),
     @required Result deleteAllInPosition(),
     @required Result deleteAll(),
     @required Result stateChanged(SignalDumperState newState),
@@ -347,6 +363,7 @@ class _$_YPositionChanged implements _YPositionChanged {
     assert(samplingAmountChanged != null);
     assert(start != null);
     assert(stop != null);
+    assert(exportDatabaseFiles != null);
     assert(deleteAllInPosition != null);
     assert(deleteAll != null);
     assert(stateChanged != null);
@@ -361,6 +378,7 @@ class _$_YPositionChanged implements _YPositionChanged {
     Result samplingAmountChanged(int samplingAmount),
     Result start(),
     Result stop(),
+    Result exportDatabaseFiles(),
     Result deleteAllInPosition(),
     Result deleteAll(),
     Result stateChanged(SignalDumperState newState),
@@ -381,6 +399,7 @@ class _$_YPositionChanged implements _YPositionChanged {
     @required Result samplingAmountChanged(_SamplingAmountChanged value),
     @required Result start(_Start value),
     @required Result stop(_Stop value),
+    @required Result exportDatabaseFiles(_ExportDatabaseFiles value),
     @required Result deleteAllInPosition(_DeleteAllInPosition value),
     @required Result deleteAll(_DeleteAll value),
     @required Result stateChanged(_StateChanged value),
@@ -390,6 +409,7 @@ class _$_YPositionChanged implements _YPositionChanged {
     assert(samplingAmountChanged != null);
     assert(start != null);
     assert(stop != null);
+    assert(exportDatabaseFiles != null);
     assert(deleteAllInPosition != null);
     assert(deleteAll != null);
     assert(stateChanged != null);
@@ -404,6 +424,7 @@ class _$_YPositionChanged implements _YPositionChanged {
     Result samplingAmountChanged(_SamplingAmountChanged value),
     Result start(_Start value),
     Result stop(_Stop value),
+    Result exportDatabaseFiles(_ExportDatabaseFiles value),
     Result deleteAllInPosition(_DeleteAllInPosition value),
     Result deleteAll(_DeleteAll value),
     Result stateChanged(_StateChanged value),
@@ -490,6 +511,7 @@ class _$_SamplingAmountChanged implements _SamplingAmountChanged {
     @required Result samplingAmountChanged(int samplingAmount),
     @required Result start(),
     @required Result stop(),
+    @required Result exportDatabaseFiles(),
     @required Result deleteAllInPosition(),
     @required Result deleteAll(),
     @required Result stateChanged(SignalDumperState newState),
@@ -499,6 +521,7 @@ class _$_SamplingAmountChanged implements _SamplingAmountChanged {
     assert(samplingAmountChanged != null);
     assert(start != null);
     assert(stop != null);
+    assert(exportDatabaseFiles != null);
     assert(deleteAllInPosition != null);
     assert(deleteAll != null);
     assert(stateChanged != null);
@@ -513,6 +536,7 @@ class _$_SamplingAmountChanged implements _SamplingAmountChanged {
     Result samplingAmountChanged(int samplingAmount),
     Result start(),
     Result stop(),
+    Result exportDatabaseFiles(),
     Result deleteAllInPosition(),
     Result deleteAll(),
     Result stateChanged(SignalDumperState newState),
@@ -533,6 +557,7 @@ class _$_SamplingAmountChanged implements _SamplingAmountChanged {
     @required Result samplingAmountChanged(_SamplingAmountChanged value),
     @required Result start(_Start value),
     @required Result stop(_Stop value),
+    @required Result exportDatabaseFiles(_ExportDatabaseFiles value),
     @required Result deleteAllInPosition(_DeleteAllInPosition value),
     @required Result deleteAll(_DeleteAll value),
     @required Result stateChanged(_StateChanged value),
@@ -542,6 +567,7 @@ class _$_SamplingAmountChanged implements _SamplingAmountChanged {
     assert(samplingAmountChanged != null);
     assert(start != null);
     assert(stop != null);
+    assert(exportDatabaseFiles != null);
     assert(deleteAllInPosition != null);
     assert(deleteAll != null);
     assert(stateChanged != null);
@@ -556,6 +582,7 @@ class _$_SamplingAmountChanged implements _SamplingAmountChanged {
     Result samplingAmountChanged(_SamplingAmountChanged value),
     Result start(_Start value),
     Result stop(_Stop value),
+    Result exportDatabaseFiles(_ExportDatabaseFiles value),
     Result deleteAllInPosition(_DeleteAllInPosition value),
     Result deleteAll(_DeleteAll value),
     Result stateChanged(_StateChanged value),
@@ -615,6 +642,7 @@ class _$_Start implements _Start {
     @required Result samplingAmountChanged(int samplingAmount),
     @required Result start(),
     @required Result stop(),
+    @required Result exportDatabaseFiles(),
     @required Result deleteAllInPosition(),
     @required Result deleteAll(),
     @required Result stateChanged(SignalDumperState newState),
@@ -624,6 +652,7 @@ class _$_Start implements _Start {
     assert(samplingAmountChanged != null);
     assert(start != null);
     assert(stop != null);
+    assert(exportDatabaseFiles != null);
     assert(deleteAllInPosition != null);
     assert(deleteAll != null);
     assert(stateChanged != null);
@@ -638,6 +667,7 @@ class _$_Start implements _Start {
     Result samplingAmountChanged(int samplingAmount),
     Result start(),
     Result stop(),
+    Result exportDatabaseFiles(),
     Result deleteAllInPosition(),
     Result deleteAll(),
     Result stateChanged(SignalDumperState newState),
@@ -658,6 +688,7 @@ class _$_Start implements _Start {
     @required Result samplingAmountChanged(_SamplingAmountChanged value),
     @required Result start(_Start value),
     @required Result stop(_Stop value),
+    @required Result exportDatabaseFiles(_ExportDatabaseFiles value),
     @required Result deleteAllInPosition(_DeleteAllInPosition value),
     @required Result deleteAll(_DeleteAll value),
     @required Result stateChanged(_StateChanged value),
@@ -667,6 +698,7 @@ class _$_Start implements _Start {
     assert(samplingAmountChanged != null);
     assert(start != null);
     assert(stop != null);
+    assert(exportDatabaseFiles != null);
     assert(deleteAllInPosition != null);
     assert(deleteAll != null);
     assert(stateChanged != null);
@@ -681,6 +713,7 @@ class _$_Start implements _Start {
     Result samplingAmountChanged(_SamplingAmountChanged value),
     Result start(_Start value),
     Result stop(_Stop value),
+    Result exportDatabaseFiles(_ExportDatabaseFiles value),
     Result deleteAllInPosition(_DeleteAllInPosition value),
     Result deleteAll(_DeleteAll value),
     Result stateChanged(_StateChanged value),
@@ -736,6 +769,7 @@ class _$_Stop implements _Stop {
     @required Result samplingAmountChanged(int samplingAmount),
     @required Result start(),
     @required Result stop(),
+    @required Result exportDatabaseFiles(),
     @required Result deleteAllInPosition(),
     @required Result deleteAll(),
     @required Result stateChanged(SignalDumperState newState),
@@ -745,6 +779,7 @@ class _$_Stop implements _Stop {
     assert(samplingAmountChanged != null);
     assert(start != null);
     assert(stop != null);
+    assert(exportDatabaseFiles != null);
     assert(deleteAllInPosition != null);
     assert(deleteAll != null);
     assert(stateChanged != null);
@@ -759,6 +794,7 @@ class _$_Stop implements _Stop {
     Result samplingAmountChanged(int samplingAmount),
     Result start(),
     Result stop(),
+    Result exportDatabaseFiles(),
     Result deleteAllInPosition(),
     Result deleteAll(),
     Result stateChanged(SignalDumperState newState),
@@ -779,6 +815,7 @@ class _$_Stop implements _Stop {
     @required Result samplingAmountChanged(_SamplingAmountChanged value),
     @required Result start(_Start value),
     @required Result stop(_Stop value),
+    @required Result exportDatabaseFiles(_ExportDatabaseFiles value),
     @required Result deleteAllInPosition(_DeleteAllInPosition value),
     @required Result deleteAll(_DeleteAll value),
     @required Result stateChanged(_StateChanged value),
@@ -788,6 +825,7 @@ class _$_Stop implements _Stop {
     assert(samplingAmountChanged != null);
     assert(start != null);
     assert(stop != null);
+    assert(exportDatabaseFiles != null);
     assert(deleteAllInPosition != null);
     assert(deleteAll != null);
     assert(stateChanged != null);
@@ -802,6 +840,7 @@ class _$_Stop implements _Stop {
     Result samplingAmountChanged(_SamplingAmountChanged value),
     Result start(_Start value),
     Result stop(_Stop value),
+    Result exportDatabaseFiles(_ExportDatabaseFiles value),
     Result deleteAllInPosition(_DeleteAllInPosition value),
     Result deleteAll(_DeleteAll value),
     Result stateChanged(_StateChanged value),
@@ -817,6 +856,136 @@ class _$_Stop implements _Stop {
 
 abstract class _Stop implements SignalDumperEvent {
   const factory _Stop() = _$_Stop;
+}
+
+abstract class _$ExportDatabaseFilesCopyWith<$Res> {
+  factory _$ExportDatabaseFilesCopyWith(_ExportDatabaseFiles value,
+          $Res Function(_ExportDatabaseFiles) then) =
+      __$ExportDatabaseFilesCopyWithImpl<$Res>;
+}
+
+class __$ExportDatabaseFilesCopyWithImpl<$Res>
+    extends _$SignalDumperEventCopyWithImpl<$Res>
+    implements _$ExportDatabaseFilesCopyWith<$Res> {
+  __$ExportDatabaseFilesCopyWithImpl(
+      _ExportDatabaseFiles _value, $Res Function(_ExportDatabaseFiles) _then)
+      : super(_value, (v) => _then(v as _ExportDatabaseFiles));
+
+  @override
+  _ExportDatabaseFiles get _value => super._value as _ExportDatabaseFiles;
+}
+
+class _$_ExportDatabaseFiles implements _ExportDatabaseFiles {
+  const _$_ExportDatabaseFiles();
+
+  @override
+  String toString() {
+    return 'SignalDumperEvent.exportDatabaseFiles()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is _ExportDatabaseFiles);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result xPositionChanged(int x),
+    @required Result yPositionChanged(int y),
+    @required Result samplingAmountChanged(int samplingAmount),
+    @required Result start(),
+    @required Result stop(),
+    @required Result exportDatabaseFiles(),
+    @required Result deleteAllInPosition(),
+    @required Result deleteAll(),
+    @required Result stateChanged(SignalDumperState newState),
+  }) {
+    assert(xPositionChanged != null);
+    assert(yPositionChanged != null);
+    assert(samplingAmountChanged != null);
+    assert(start != null);
+    assert(stop != null);
+    assert(exportDatabaseFiles != null);
+    assert(deleteAllInPosition != null);
+    assert(deleteAll != null);
+    assert(stateChanged != null);
+    return exportDatabaseFiles();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result xPositionChanged(int x),
+    Result yPositionChanged(int y),
+    Result samplingAmountChanged(int samplingAmount),
+    Result start(),
+    Result stop(),
+    Result exportDatabaseFiles(),
+    Result deleteAllInPosition(),
+    Result deleteAll(),
+    Result stateChanged(SignalDumperState newState),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (exportDatabaseFiles != null) {
+      return exportDatabaseFiles();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result xPositionChanged(_XPositionChanged value),
+    @required Result yPositionChanged(_YPositionChanged value),
+    @required Result samplingAmountChanged(_SamplingAmountChanged value),
+    @required Result start(_Start value),
+    @required Result stop(_Stop value),
+    @required Result exportDatabaseFiles(_ExportDatabaseFiles value),
+    @required Result deleteAllInPosition(_DeleteAllInPosition value),
+    @required Result deleteAll(_DeleteAll value),
+    @required Result stateChanged(_StateChanged value),
+  }) {
+    assert(xPositionChanged != null);
+    assert(yPositionChanged != null);
+    assert(samplingAmountChanged != null);
+    assert(start != null);
+    assert(stop != null);
+    assert(exportDatabaseFiles != null);
+    assert(deleteAllInPosition != null);
+    assert(deleteAll != null);
+    assert(stateChanged != null);
+    return exportDatabaseFiles(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result xPositionChanged(_XPositionChanged value),
+    Result yPositionChanged(_YPositionChanged value),
+    Result samplingAmountChanged(_SamplingAmountChanged value),
+    Result start(_Start value),
+    Result stop(_Stop value),
+    Result exportDatabaseFiles(_ExportDatabaseFiles value),
+    Result deleteAllInPosition(_DeleteAllInPosition value),
+    Result deleteAll(_DeleteAll value),
+    Result stateChanged(_StateChanged value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (exportDatabaseFiles != null) {
+      return exportDatabaseFiles(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ExportDatabaseFiles implements SignalDumperEvent {
+  const factory _ExportDatabaseFiles() = _$_ExportDatabaseFiles;
 }
 
 abstract class _$DeleteAllInPositionCopyWith<$Res> {
@@ -860,6 +1029,7 @@ class _$_DeleteAllInPosition implements _DeleteAllInPosition {
     @required Result samplingAmountChanged(int samplingAmount),
     @required Result start(),
     @required Result stop(),
+    @required Result exportDatabaseFiles(),
     @required Result deleteAllInPosition(),
     @required Result deleteAll(),
     @required Result stateChanged(SignalDumperState newState),
@@ -869,6 +1039,7 @@ class _$_DeleteAllInPosition implements _DeleteAllInPosition {
     assert(samplingAmountChanged != null);
     assert(start != null);
     assert(stop != null);
+    assert(exportDatabaseFiles != null);
     assert(deleteAllInPosition != null);
     assert(deleteAll != null);
     assert(stateChanged != null);
@@ -883,6 +1054,7 @@ class _$_DeleteAllInPosition implements _DeleteAllInPosition {
     Result samplingAmountChanged(int samplingAmount),
     Result start(),
     Result stop(),
+    Result exportDatabaseFiles(),
     Result deleteAllInPosition(),
     Result deleteAll(),
     Result stateChanged(SignalDumperState newState),
@@ -903,6 +1075,7 @@ class _$_DeleteAllInPosition implements _DeleteAllInPosition {
     @required Result samplingAmountChanged(_SamplingAmountChanged value),
     @required Result start(_Start value),
     @required Result stop(_Stop value),
+    @required Result exportDatabaseFiles(_ExportDatabaseFiles value),
     @required Result deleteAllInPosition(_DeleteAllInPosition value),
     @required Result deleteAll(_DeleteAll value),
     @required Result stateChanged(_StateChanged value),
@@ -912,6 +1085,7 @@ class _$_DeleteAllInPosition implements _DeleteAllInPosition {
     assert(samplingAmountChanged != null);
     assert(start != null);
     assert(stop != null);
+    assert(exportDatabaseFiles != null);
     assert(deleteAllInPosition != null);
     assert(deleteAll != null);
     assert(stateChanged != null);
@@ -926,6 +1100,7 @@ class _$_DeleteAllInPosition implements _DeleteAllInPosition {
     Result samplingAmountChanged(_SamplingAmountChanged value),
     Result start(_Start value),
     Result stop(_Stop value),
+    Result exportDatabaseFiles(_ExportDatabaseFiles value),
     Result deleteAllInPosition(_DeleteAllInPosition value),
     Result deleteAll(_DeleteAll value),
     Result stateChanged(_StateChanged value),
@@ -983,6 +1158,7 @@ class _$_DeleteAll implements _DeleteAll {
     @required Result samplingAmountChanged(int samplingAmount),
     @required Result start(),
     @required Result stop(),
+    @required Result exportDatabaseFiles(),
     @required Result deleteAllInPosition(),
     @required Result deleteAll(),
     @required Result stateChanged(SignalDumperState newState),
@@ -992,6 +1168,7 @@ class _$_DeleteAll implements _DeleteAll {
     assert(samplingAmountChanged != null);
     assert(start != null);
     assert(stop != null);
+    assert(exportDatabaseFiles != null);
     assert(deleteAllInPosition != null);
     assert(deleteAll != null);
     assert(stateChanged != null);
@@ -1006,6 +1183,7 @@ class _$_DeleteAll implements _DeleteAll {
     Result samplingAmountChanged(int samplingAmount),
     Result start(),
     Result stop(),
+    Result exportDatabaseFiles(),
     Result deleteAllInPosition(),
     Result deleteAll(),
     Result stateChanged(SignalDumperState newState),
@@ -1026,6 +1204,7 @@ class _$_DeleteAll implements _DeleteAll {
     @required Result samplingAmountChanged(_SamplingAmountChanged value),
     @required Result start(_Start value),
     @required Result stop(_Stop value),
+    @required Result exportDatabaseFiles(_ExportDatabaseFiles value),
     @required Result deleteAllInPosition(_DeleteAllInPosition value),
     @required Result deleteAll(_DeleteAll value),
     @required Result stateChanged(_StateChanged value),
@@ -1035,6 +1214,7 @@ class _$_DeleteAll implements _DeleteAll {
     assert(samplingAmountChanged != null);
     assert(start != null);
     assert(stop != null);
+    assert(exportDatabaseFiles != null);
     assert(deleteAllInPosition != null);
     assert(deleteAll != null);
     assert(stateChanged != null);
@@ -1049,6 +1229,7 @@ class _$_DeleteAll implements _DeleteAll {
     Result samplingAmountChanged(_SamplingAmountChanged value),
     Result start(_Start value),
     Result stop(_Stop value),
+    Result exportDatabaseFiles(_ExportDatabaseFiles value),
     Result deleteAllInPosition(_DeleteAllInPosition value),
     Result deleteAll(_DeleteAll value),
     Result stateChanged(_StateChanged value),
@@ -1141,6 +1322,7 @@ class _$_StateChanged implements _StateChanged {
     @required Result samplingAmountChanged(int samplingAmount),
     @required Result start(),
     @required Result stop(),
+    @required Result exportDatabaseFiles(),
     @required Result deleteAllInPosition(),
     @required Result deleteAll(),
     @required Result stateChanged(SignalDumperState newState),
@@ -1150,6 +1332,7 @@ class _$_StateChanged implements _StateChanged {
     assert(samplingAmountChanged != null);
     assert(start != null);
     assert(stop != null);
+    assert(exportDatabaseFiles != null);
     assert(deleteAllInPosition != null);
     assert(deleteAll != null);
     assert(stateChanged != null);
@@ -1164,6 +1347,7 @@ class _$_StateChanged implements _StateChanged {
     Result samplingAmountChanged(int samplingAmount),
     Result start(),
     Result stop(),
+    Result exportDatabaseFiles(),
     Result deleteAllInPosition(),
     Result deleteAll(),
     Result stateChanged(SignalDumperState newState),
@@ -1184,6 +1368,7 @@ class _$_StateChanged implements _StateChanged {
     @required Result samplingAmountChanged(_SamplingAmountChanged value),
     @required Result start(_Start value),
     @required Result stop(_Stop value),
+    @required Result exportDatabaseFiles(_ExportDatabaseFiles value),
     @required Result deleteAllInPosition(_DeleteAllInPosition value),
     @required Result deleteAll(_DeleteAll value),
     @required Result stateChanged(_StateChanged value),
@@ -1193,6 +1378,7 @@ class _$_StateChanged implements _StateChanged {
     assert(samplingAmountChanged != null);
     assert(start != null);
     assert(stop != null);
+    assert(exportDatabaseFiles != null);
     assert(deleteAllInPosition != null);
     assert(deleteAll != null);
     assert(stateChanged != null);
@@ -1207,6 +1393,7 @@ class _$_StateChanged implements _StateChanged {
     Result samplingAmountChanged(_SamplingAmountChanged value),
     Result start(_Start value),
     Result stop(_Stop value),
+    Result exportDatabaseFiles(_ExportDatabaseFiles value),
     Result deleteAllInPosition(_DeleteAllInPosition value),
     Result deleteAll(_DeleteAll value),
     Result stateChanged(_StateChanged value),

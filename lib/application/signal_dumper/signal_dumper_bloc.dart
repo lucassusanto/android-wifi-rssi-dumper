@@ -22,6 +22,7 @@ class SignalDumperBloc extends Bloc<SignalDumperEvent, SignalDumperState> {
       : super(SignalDumperState.initial());
 
   StreamSubscription<SignalDumperState> _samplingProcessSubscription;
+  StreamSubscription<SignalDumperState> _exportDatabaseFilesSubscription;
   StreamSubscription<SignalDumperState> _deleteAllDumpInPositionSubscription;
   StreamSubscription<SignalDumperState> _deleteAllDumpSubscription;
   bool isProcessing = false;
@@ -29,6 +30,7 @@ class SignalDumperBloc extends Bloc<SignalDumperEvent, SignalDumperState> {
   @override
   Future<void> close() async {
     await _samplingProcessSubscription?.cancel();
+    await _exportDatabaseFilesSubscription?.cancel();
     await _deleteAllDumpInPositionSubscription?.cancel();
     await _deleteAllDumpSubscription?.cancel();
     return super.close();
@@ -56,6 +58,13 @@ class SignalDumperBloc extends Bloc<SignalDumperEvent, SignalDumperState> {
       },
       stop: (_) async* {
         isProcessing = false;
+      },
+      exportDatabaseFiles: (_) async* {
+        await _exportDatabaseFilesSubscription?.cancel();
+        _exportDatabaseFilesSubscription =
+            _exportDatabaseFiles().listen((newState) {
+          add(SignalDumperEvent.stateChanged(newState));
+        });
       },
       deleteAllInPosition: (_) async* {
         await _deleteAllDumpInPositionSubscription?.cancel();
@@ -133,6 +142,22 @@ class SignalDumperBloc extends Bloc<SignalDumperEvent, SignalDumperState> {
       (f) => state.copyWith(failureOrSuccess: some(left(f))),
       (currentAmount) => state.copyWith(currentSamplingAmount: currentAmount),
     );
+  }
+
+  Stream<SignalDumperState> _exportDatabaseFiles() async* {
+    yield state.copyWith(
+      isProcessing: true,
+      failureOrSuccess: some(right(unit)),
+    );
+
+    final either = await _signalDumperRepository.exportDatabaseFiles();
+
+    yield either.fold(
+      (f) => state.copyWith(failureOrSuccess: some(left(f))),
+      (_) => state,
+    );
+
+    yield state.copyWith(isProcessing: false);
   }
 
   Stream<SignalDumperState> _deleteAllDumpInPosition() async* {

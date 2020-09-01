@@ -16,6 +16,8 @@ abstract class ISignalDumperRepository {
     @required YPosition y,
   });
 
+  Future<Either<SignalDumperFailure, Unit>> exportDatabaseFiles();
+
   Future<Either<SignalDumperFailure, Unit>> deleteAllDumpInPosition({
     @required XPosition x,
     @required YPosition y,

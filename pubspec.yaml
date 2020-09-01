@@ -22,14 +22,15 @@ dependencies:
   json_annotation: ^3.0.1
   moor: ^3.3.1
   moor_flutter: ^3.1.0
-  flutter_bloc: ^6.0.1
+  flutter_bloc: ^6.0.2
   rflutter_alert: ^1.0.3
+  path_provider: ^1.6.14
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   build_runner:
-  freezed: ^0.11.5
+  freezed: ^0.11.6
   injectable_generator: ^1.0.4
   auto_route_generator: ^0.6.8
   moor_generator: ^3.3.1

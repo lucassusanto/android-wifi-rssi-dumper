@@ -72,6 +72,19 @@ class SignalDumperRepository implements ISignalDumperRepository {
   }
 
   @override
+  Future<Either<SignalDumperFailure, Unit>> exportDatabaseFiles() async {
+    try {
+      await _localDataSource.exportDatabaseFiles();
+      return right(unit);
+    } catch (e) {
+      print(
+        'Unexpected failure at SignalDumperRepository@exportDatabaseFiles! ${e.toString()}',
+      );
+      return left(SignalDumperFailure.unexpectedFailure());
+    }
+  }
+
+  @override
   Future<Either<SignalDumperFailure, Unit>> deleteAllDumpInPosition({
     XPosition x,
     YPosition y,

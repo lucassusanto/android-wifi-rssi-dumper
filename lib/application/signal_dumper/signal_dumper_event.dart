@@ -9,6 +9,8 @@ abstract class SignalDumperEvent with _$SignalDumperEvent {
 
   const factory SignalDumperEvent.start() = _Start;
   const factory SignalDumperEvent.stop() = _Stop;
+
+  const factory SignalDumperEvent.exportDatabaseFiles() = _ExportDatabaseFiles;
   const factory SignalDumperEvent.deleteAllInPosition() = _DeleteAllInPosition;
   const factory SignalDumperEvent.deleteAll() = _DeleteAll;
 

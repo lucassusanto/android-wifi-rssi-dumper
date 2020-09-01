@@ -44,6 +44,21 @@ class SignalDumperProcessingPage extends StatelessWidget {
                     ),
                     SizedBox(height: 32.0),
                     LockedInputsWidget(),
+                    SizedBox(height: 32.0),
+                    Row(
+                      children: <Widget>[
+                        Expanded(
+                          child: RaisedButton(
+                            child: Text('STOP'),
+                            onPressed: () {
+                              context
+                                  .bloc<SignalDumperBloc>()
+                                  .add(const SignalDumperEvent.stop());
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
