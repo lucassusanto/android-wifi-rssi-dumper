@@ -29,7 +29,7 @@ class SignalDumperAppBar extends StatelessWidget {
             var list = List<PopupMenuEntry<Object>>();
             list.add(
               PopupMenuItem(
-                child: Text('Dump database to Documents'),
+                child: Text('Export database files'),
                 value: 1,
               ),
             );
@@ -55,7 +55,8 @@ class SignalDumperAppBar extends StatelessWidget {
   void exportDatabaseFiles(context) {
     showConfirmationDialog(
       context: context,
-      message: 'Are you sure to export database into files?',
+      message:
+          'Are you sure to export database into files? Files will be stored in Android/data/com.unicode.wifi_rssi_dumper/files',
       action: () {
         BlocProvider.of<SignalDumperBloc>(context)
             .add(const SignalDumperEvent.exportDatabaseFiles());
